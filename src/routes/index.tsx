@@ -252,7 +252,7 @@ function Hero() {
                 variant="outline"
                 className="rounded-full border-primary/30 px-6 text-primary hover:bg-primary-soft"
               >
-                <a href="#biology">Explore the Science</a>
+                <a href="#contact">Request Science Information</a>
               </Button>
             </div>
           </div>
