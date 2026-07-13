@@ -337,6 +337,30 @@ function SectionHeader({
   );
 }
 
+function SectionArt({
+  src,
+  className,
+  imageClassName,
+}: {
+  src: string;
+  className?: string;
+  imageClassName?: string;
+}) {
+  return (
+    <div
+      className={`pointer-events-none absolute inset-0 overflow-hidden ${className ?? ""}`}
+      aria-hidden="true"
+    >
+      <img
+        src={src}
+        alt=""
+        className={`absolute max-w-none select-none ${imageClassName ?? ""}`}
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 function Differentiation() {
   const items = [
     {
@@ -477,8 +501,13 @@ function HealingBiology() {
   ];
 
   return (
-    <section id="biology" className="relative py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="biology" className="relative overflow-hidden py-20 sm:py-28">
+      <SectionArt
+        src="/media/elements/evopatch-cell-element.jpg"
+        className="opacity-[0.16] mix-blend-multiply"
+        imageClassName="inset-0 h-full w-full object-cover"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Healing Biology"
           title="The First Days After Surgery Can Shape the Tissue Response"
@@ -622,8 +651,13 @@ function Research() {
   ];
 
   return (
-    <section id="research" className="relative py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="research" className="relative overflow-hidden py-20 sm:py-28">
+      <SectionArt
+        src="/media/elements/evopatch-dna-strand.jpg"
+        className="opacity-[0.11] mix-blend-multiply"
+        imageClassName="-right-40 -top-16 w-[36rem] rotate-[-8deg] sm:w-[44rem] lg:w-[54rem]"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Science in Motion"
           title="Building the Evidence Behind the Tissue"
@@ -722,8 +756,16 @@ function SurgicalUtility() {
   ];
 
   return (
-    <section id="utility" className="relative border-y border-hairline bg-canvas py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section
+      id="utility"
+      className="relative overflow-hidden border-y border-hairline bg-canvas py-20 sm:py-28"
+    >
+      <SectionArt
+        src="/media/elements/evopatch-dot-lines.jpg"
+        className="opacity-[0.07] mix-blend-multiply"
+        imageClassName="-bottom-32 -left-28 w-[58rem] sm:w-[72rem]"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
           eyebrow="Surgical Utility"
           title="Broad Coverage for Diverse Surgical Environments"
