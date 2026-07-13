@@ -95,7 +95,8 @@ const SPECIALTIES = [
   "Other",
 ];
 
-const CONTACT_EMAIL = "info@evologicsamerica.com";
+const CONTACT_EMAIL = "theresa@evologicsamerica.com";
+const CONTACT_SUBJECT = "EvoPatch product information request";
 
 function LandingPage() {
   const [navOpen, setNavOpen] = useState(false);
@@ -1281,6 +1282,7 @@ function ContactSection() {
             className="grid gap-5 rounded-2xl border border-hairline bg-card p-6 shadow-[var(--shadow-card)] sm:p-8"
           >
             <input type="hidden" name="form-name" value="evopatch-contact" />
+            <input type="hidden" name="subject" value={CONTACT_SUBJECT} />
             <p className="hidden">
               <label>
                 Do not fill this out:
