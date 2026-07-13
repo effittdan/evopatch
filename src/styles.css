@@ -1,0 +1,131 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-canvas: var(--canvas);
+  --color-hairline: var(--hairline);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* A-MATRX brand — warm clinical canvas, deep evergreen, restrained bronze */
+  --background: oklch(0.985 0.008 95);
+  --foreground: oklch(0.22 0.02 150);
+  --card: oklch(0.995 0.004 95);
+  --card-foreground: oklch(0.22 0.02 150);
+  --popover: oklch(0.995 0.004 95);
+  --popover-foreground: oklch(0.22 0.02 150);
+
+  --primary: oklch(0.36 0.075 148);
+  --primary-foreground: oklch(0.985 0.008 95);
+  --primary-soft: oklch(0.94 0.025 148);
+
+  --secondary: oklch(0.955 0.012 95);
+  --secondary-foreground: oklch(0.28 0.03 150);
+
+  --muted: oklch(0.955 0.012 95);
+  --muted-foreground: oklch(0.48 0.015 130);
+
+  --accent: oklch(0.66 0.09 65);
+  --accent-foreground: oklch(0.985 0.008 95);
+  --accent-soft: oklch(0.93 0.03 75);
+
+  --destructive: oklch(0.55 0.18 27);
+  --destructive-foreground: oklch(0.985 0.008 95);
+
+  --border: oklch(0.90 0.012 120);
+  --input: oklch(0.90 0.012 120);
+  --ring: oklch(0.36 0.075 148);
+
+  --canvas: oklch(0.975 0.012 95);
+  --hairline: oklch(0.88 0.014 130);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.022em;
+  }
+}
+
+@utility matrix-grid {
+  background-image:
+    linear-gradient(oklch(0.36 0.075 148 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.36 0.075 148 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+@utility hairline-b {
+  border-bottom: 1px solid var(--hairline);
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@utility fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
