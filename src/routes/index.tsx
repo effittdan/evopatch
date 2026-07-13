@@ -214,7 +214,8 @@ function Hero() {
               </span>
             </div>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              EvoPatch™
+              EvoPatch
+              <sup className="ml-1 align-super text-[0.5em] leading-none">TM</sup>
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-muted-foreground sm:text-xl">
               Purpose-built amnion coverage for the surgical healing environment.
