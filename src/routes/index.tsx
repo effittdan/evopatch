@@ -43,8 +43,8 @@ import bgTexture from "@/assets/bg-texture.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { property: "og:image", content: "/media/evopatch-brochure-cover.jpg" },
-      { name: "twitter:image", content: "/media/evopatch-brochure-cover.jpg" },
+      { property: "og:image", content: "/media/product/evopatch-4x8-float.jpg" },
+      { name: "twitter:image", content: "/media/product/evopatch-4x8-float.jpg" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
           brand: { "@type": "Brand", name: "Evologics" },
           description:
             "Sterile, dehydrated, double-layer human amniotic membrane allograft intended for homologous use as a protective wound covering in surgical settings.",
-          image: "/media/evopatch-brochure-cover.jpg",
+          image: "/media/product/evopatch-4x8-float.jpg",
           category: "Human amniotic membrane allograft (HCT/P)",
         }),
       },
@@ -256,11 +256,11 @@ function Hero() {
           </div>
 
           <div className="relative lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-hairline bg-card shadow-[0_30px_80px_-30px_oklch(0.36_0.075_148_/_0.35)]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-hairline bg-white shadow-[0_30px_80px_-30px_oklch(0.36_0.075_148_/_0.35)]">
               <img
-                src="/media/evopatch-brochure-cover.jpg"
-                alt="EvoPatch double-layer amnion graft brochure cover"
-                className="absolute inset-0 h-full w-full object-cover"
+                src="/media/product/evopatch-4x8-float.jpg"
+                alt="EvoPatch double-layer amnion graft product photo"
+                className="absolute inset-0 h-full w-full object-contain p-5"
               />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-hairline bg-card/90 p-4 backdrop-blur">
                 <div className="flex items-center gap-3">
@@ -570,10 +570,10 @@ function EvoPatchDifference() {
             title="Designed Around Both Tissue and Technique"
             intro="EvoPatch brings together human amniotic membrane, dual-layer construction, omni-directional placement, and practical OR handling."
           />
-          <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-card">
+          <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-white">
             <img
-              src="/media/evopatch-product-overview.jpg"
-              alt="EvoPatch product overview and graft examples"
+              src="/media/product/evopatch-4x4-curl.jpg"
+              alt="EvoPatch 4 by 4 double-layer amnion graft with flexible corner"
               className="h-full w-full object-cover"
             />
           </div>
@@ -829,12 +829,30 @@ function Sizes() {
             title="Coverage From Focused Sites to Broad Surgical Fields"
             intro="EvoPatch is available in a range of dimensions, allowing clinicians and facilities to match the graft configuration to anatomy and procedural requirements."
           />
-          <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-card">
-            <img
-              src="/media/evopatch-sizes-and-utility.jpg"
-              alt="EvoPatch brochure page showing procedural examples and size table"
-              className="h-full w-full object-cover"
-            />
+          <div className="mt-8 grid gap-4">
+            <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
+              <img
+                src="/media/product/evopatch-4x4-flat.jpg"
+                alt="EvoPatch 4 by 4 double-layer amnion graft"
+                className="h-56 w-full object-cover sm:h-64"
+              />
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
+                <img
+                  src="/media/product/evopatch-4x8-flat.jpg"
+                  alt="EvoPatch 4 by 8 double-layer amnion graft"
+                  className="h-40 w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
+                <img
+                  src="/media/product/evopatch-6x6-end-to-end-flat.jpg"
+                  alt="EvoPatch 6 by 6 end-to-end graft with center opening"
+                  className="h-40 w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="lg:col-span-7">
@@ -943,15 +961,15 @@ function WorkflowStorage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-hairline bg-card">
               <img
-                src="/media/evopatch-product-overview.jpg"
-                alt="EvoPatch graft configurations"
+                src="/media/product/evopatch-4x8-close.jpg"
+                alt="Close-up of flexible EvoPatch double-layer amnion graft texture"
                 className="h-72 w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-2xl border border-hairline bg-card">
               <img
-                src="/media/evopatch-contact.jpg"
-                alt="Evologics contact and research support brochure page"
+                src="/media/product/evopatch-6x6-end-to-end-close.jpg"
+                alt="Close-up of EvoPatch 6 by 6 end-to-end graft center opening"
                 className="h-72 w-full object-cover"
               />
             </div>

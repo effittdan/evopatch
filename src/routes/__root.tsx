@@ -117,11 +117,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "/media/evopatch-brochure-cover.jpg",
+        content: "/media/product/evopatch-4x8-float.jpg",
       },
       {
         name: "twitter:image",
-        content: "/media/evopatch-brochure-cover.jpg",
+        content: "/media/product/evopatch-4x8-float.jpg",
       },
     ],
     links: [
