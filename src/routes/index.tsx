@@ -922,10 +922,6 @@ function Sizes() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Final page should be checked against the current live SKU and labeling master before
-            launch.
-          </p>
         </div>
       </div>
     </section>
