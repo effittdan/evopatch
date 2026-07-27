@@ -812,7 +812,7 @@ function Attributes() {
     ["Single-Patient Use", "EvoPatch must not be reused or re-sterilized."],
     [
       "Optional Hydration",
-      "The healthcare provider may hydrate the graft with sterile saline prior to placement.",
+      "EvoPatch may be placed directly from the sterile package or hydrated with sterile saline.",
     ],
     [
       "Natural Tissue Variation",
