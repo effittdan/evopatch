@@ -811,7 +811,7 @@ function Attributes() {
     ],
     ["Single-Patient Use", "EvoPatch must not be reused or re-sterilized."],
     [
-      "Optional Hydration",
+      "Dry or Hydrated Handling",
       "EvoPatch may be placed directly from the sterile package or hydrated with sterile saline.",
     ],
     [
