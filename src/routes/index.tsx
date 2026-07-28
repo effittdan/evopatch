@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: "/media/product/evopatch-4x8-float.jpg" },
       { name: "twitter:image", content: "/media/product/evopatch-4x8-float.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://evopatch.com/" }],
     scripts: [
       {
         type: "application/ld+json",
