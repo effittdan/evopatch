@@ -52,13 +52,20 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Product",
-          name: "EvoPatch",
-          brand: { "@type": "Brand", name: "Evologics" },
+          "@type": "WebPage",
+          url: "https://evopatch.com/",
+          name: "EvoPatch™ | Double-Layer Human Amnion Allograft for Surgical Coverage",
           description:
-            "Sterile, dehydrated, double-layer human amniotic membrane allograft intended for homologous use as a protective wound covering in surgical settings.",
-          image: "/media/product/evopatch-4x8-float.jpg",
-          category: "Human amniotic membrane allograft (HCT/P)",
+            "Explore EvoPatch, a sterile, double-layer, chorion-free human amniotic membrane allograft designed for protective tissue coverage in robotic, laparoscopic, and open surgical workflows.",
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: "https://evopatch.com/media/product/evopatch-4x8-float.jpg",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Evologics",
+            url: "https://www.evologicsamerica.com/",
+          },
         }),
       },
     ],
