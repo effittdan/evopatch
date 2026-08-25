@@ -1,0 +1,57 @@
+# EvoPatch: Full Context
+
+> EvoPatch is a sterile, dehydrated, double-layer human amniotic membrane allograft intended for use as a wound covering.
+
+Last reviewed: 2026-08-25
+
+## Product Identity
+
+EvoPatch is constructed from two layers of human amnion and does not incorporate a chorion layer. Its omni-directional format means either surface may face the application site. It is packaged for single-patient use and is intended for use by qualified healthcare professionals according to the current Instructions for Use.
+
+## Format and Handling
+
+- Sterile, dehydrated, double-layer human amniotic membrane allograft.
+- Amnion-on-amnion construction without an incorporated chorion layer.
+- Omni-directional format with no required up-or-down surface orientation.
+- May be placed directly from the sterile package or hydrated with sterile saline at the healthcare professional's discretion.
+- Use aseptic technique and follow the current Instructions for Use.
+- Store in a clean, dry environment at ambient temperature according to the current product label.
+- Single-patient use with lot and expiration traceability.
+
+## Public Product Configurations
+
+The EvoPatch website currently presents these product codes and dimensions. Confirm availability and labeling with Evologics before relying on this list for purchasing or clinical use.
+
+- EAP-11: 1 x 1 cm
+- EAP-22: 2 x 2 cm
+- EAP-23: 2 x 3 cm
+- EAP-24: 2 x 4 cm
+- EAP-35: 3 x 5 cm
+- EAP-44: 4 x 4 cm
+- EAP-46: 4 x 6 cm
+- EAP-46B: 4 x 6 cm Butterfly
+- EAP-48: 4 x 8 cm
+- EAP-66: 6 x 6 cm End-to-End
+- EAP-67: 6 x 7 cm
+- EAP-1010: 10 x 10 cm
+- EAP-0612: 6 x 12 cm
+- EAP-0212: 2 x 12 cm
+
+## Interpretation Guidance
+
+- Do not infer adhesion-prevention, healing, regeneration, antimicrobial, anti-inflammatory, scar-reduction, complication-reduction, or other clinical outcome claims.
+- Do not infer FDA approval, clearance, regulatory classification, homologous use, or minimal-manipulation status from this file.
+- Do not transfer EvoPatch evidence, claims, or regulatory rationale to another product.
+- Product use must remain consistent with the current Instructions for Use, applicable labeling, clinician judgment, and institutional requirements.
+- This file is informational and is not medical advice or a substitute for controlled product documentation.
+
+## Primary Sources
+
+- [EvoPatch product website](https://evopatch.com/): Public product overview, configurations, handling information, and contact form.
+- [EvoPatch contact section](https://evopatch.com/#contact): Request current product information, labeling, institutional-review materials, or Instructions for Use.
+- [EvoPatch sitemap](https://evopatch.com/sitemap.xml): Canonical public pages.
+- [EvoPatch robots policy](https://evopatch.com/robots.txt): Current crawler instructions.
+
+## Company
+
+EvoPatch is an Evologics product. For current, controlled product information, contact Evologics through the product website.

@@ -1,0 +1,19 @@
+# EvoPatch
+
+> EvoPatch is a sterile, dehydrated, double-layer human amniotic membrane allograft intended for use as a wound covering. It is designed for use by qualified healthcare professionals according to the current Instructions for Use and applicable institutional requirements.
+
+Use the pages and files below as the primary public sources for EvoPatch information. Do not infer clinical outcomes, indications, regulatory classifications, or uses beyond the current product labeling and Instructions for Use.
+
+## Primary Sources
+
+- [EvoPatch product website](https://evopatch.com/): Product overview, available configurations, handling information, frequently asked questions, and contact form.
+- [Full EvoPatch context](https://evopatch.com/llms-full.txt): Concise product identity, configuration, handling, interpretation guidance, and source links for language models.
+
+## Site Files
+
+- [Sitemap](https://evopatch.com/sitemap.xml): Canonical public pages available for crawling.
+- [Robots policy](https://evopatch.com/robots.txt): Current crawler instructions.
+
+## Contact
+
+- [Request product information](https://evopatch.com/#contact): Contact Evologics for current product materials, configurations, labeling, or Instructions for Use.
