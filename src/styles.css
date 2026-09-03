@@ -4,6 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin.woff2") format("woff2");
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -67,8 +75,8 @@
   --destructive: oklch(0.55 0.18 27);
   --destructive-foreground: oklch(0.985 0.008 95);
 
-  --border: oklch(0.90 0.012 120);
-  --input: oklch(0.90 0.012 120);
+  --border: oklch(0.9 0.012 120);
+  --input: oklch(0.9 0.012 120);
   --ring: oklch(0.36 0.075 148);
 
   --canvas: oklch(0.975 0.012 95);
@@ -96,7 +104,10 @@
     scroll-padding-top: 5rem;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.022em;
   }
@@ -119,13 +130,4 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
-}
-
-@utility fade-in-up {
-  animation: fadeInUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
 }

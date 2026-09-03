@@ -44,12 +44,39 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+function addHomepageCacheHeaders(request: Request, response: Response): Response {
+  const url = new URL(request.url);
+  const contentType = response.headers.get("content-type") ?? "";
+  if (
+    request.method !== "GET" ||
+    url.pathname !== "/" ||
+    response.status !== 200 ||
+    !contentType.includes("text/html")
+  ) {
+    return response;
+  }
+
+  const headers = new Headers(response.headers);
+  headers.set(
+    "Netlify-CDN-Cache-Control",
+    "public, durable, s-maxage=86400, stale-while-revalidate=604800",
+  );
+  headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalizedResponse = await normalizeCatastrophicSsrResponse(response);
+      return addHomepageCacheHeaders(request, normalizedResponse);
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {

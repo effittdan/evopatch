@@ -38,8 +38,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/sonner";
 
-import bgTexture from "@/assets/bg-texture.png.asset.json";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -140,7 +138,14 @@ function Nav({ navOpen, setNavOpen }: { navOpen: boolean; setNavOpen: (v: boolea
     <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
         <a href="#top" className="flex items-center gap-2" aria-label="Evologics EvoPatch">
-          <img src="/brand/evologics-logo-wide.png" alt="Evologics" className="h-8 w-auto sm:h-9" />
+          <img
+            src="/brand/evologics-logo-wide.webp"
+            alt="Evologics"
+            width={455}
+            height={128}
+            decoding="async"
+            className="h-8 w-auto sm:h-9"
+          />
         </a>
         <nav className="hidden items-center gap-6 xl:flex">
           {NAV.map((item) => (
@@ -200,9 +205,9 @@ function Hero() {
     <section id="top" className="relative overflow-hidden pt-24 sm:pt-28">
       <div className="pointer-events-none absolute inset-0 matrix-grid opacity-60" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.28] mix-blend-multiply"
+        className="pointer-events-none absolute inset-0 hidden opacity-[0.28] mix-blend-multiply sm:block"
         style={{
-          backgroundImage: `url(${bgTexture.url})`,
+          backgroundImage: "url(/media/optimized/bg-texture-1200.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -213,11 +218,18 @@ function Hero() {
         className="relative mx-auto max-w-7xl px-5 pb-20 pt-12 sm:px-8 sm:pt-16 lg:pb-28"
       >
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7 fade-in-up">
-            <img src="/brand/evo-logo-mark.png" alt="" className="mb-5 h-14 w-auto sm:h-16" />
-            <div className="inline-flex items-center gap-2 rounded-full border border-hairline bg-card px-3 py-1.5">
+          <div className="lg:col-span-7">
+            <img
+              src="/brand/evo-logo-mark.webp"
+              alt=""
+              width={128}
+              height={124}
+              decoding="async"
+              className="mb-5 h-14 w-auto sm:h-16"
+            />
+            <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-hairline bg-card px-3 py-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              <span className="text-xs font-semibold tracking-wider text-primary uppercase">
+              <span className="min-w-0 text-xs leading-relaxed font-semibold tracking-wider text-primary uppercase">
                 Evologics · Double-Layer Human Amnion Allograft
               </span>
             </div>
@@ -267,8 +279,14 @@ function Hero() {
           <div className="relative lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-hairline bg-white shadow-[0_30px_80px_-30px_oklch(0.36_0.075_148_/_0.35)]">
               <img
-                src="/media/product/evopatch-4x8-float.jpg"
+                src="/media/optimized/evopatch-4x8-float-960.webp"
+                srcSet="/media/optimized/evopatch-4x8-float-640.webp 640w, /media/optimized/evopatch-4x8-float-960.webp 960w"
+                sizes="(min-width: 1024px) 40vw, 100vw"
                 alt="EvoPatch double-layer amnion graft product photo"
+                width={960}
+                height={960}
+                fetchPriority="high"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-contain p-5"
               />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-hairline bg-card/90 p-4 backdrop-blur">
@@ -364,6 +382,7 @@ function SectionArt({
         alt=""
         className={`absolute max-w-none select-none ${imageClassName ?? ""}`}
         loading="lazy"
+        decoding="async"
       />
     </div>
   );
@@ -511,7 +530,7 @@ function HealingBiology() {
   return (
     <section id="biology" className="relative overflow-hidden py-20 sm:py-28">
       <SectionArt
-        src="/media/elements/evopatch-cell-element.jpg"
+        src="/media/optimized/evopatch-cell-element-960.webp"
         className="opacity-[0.16] mix-blend-multiply"
         imageClassName="inset-0 h-full w-full object-cover"
       />
@@ -610,8 +629,12 @@ function EvoPatchDifference() {
           />
           <div className="mt-8 overflow-hidden rounded-2xl border border-hairline bg-white">
             <img
-              src="/media/product/evopatch-4x4-curl.jpg"
+              src="/media/optimized/evopatch-4x4-curl-960.webp"
               alt="EvoPatch 4 by 4 double-layer amnion graft with flexible corner"
+              width={960}
+              height={960}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover"
             />
           </div>
@@ -661,7 +684,7 @@ function Research() {
   return (
     <section id="research" className="relative overflow-hidden py-20 sm:py-28">
       <SectionArt
-        src="/media/elements/evopatch-dna-strand.jpg"
+        src="/media/optimized/evopatch-dna-strand-960.webp"
         className="opacity-[0.11] mix-blend-multiply"
         imageClassName="-right-40 -top-16 w-[36rem] rotate-[-8deg] sm:w-[44rem] lg:w-[54rem]"
       />
@@ -769,7 +792,7 @@ function SurgicalUtility() {
       className="relative overflow-hidden border-y border-hairline bg-canvas py-20 sm:py-28"
     >
       <SectionArt
-        src="/media/elements/evopatch-dot-lines.jpg"
+        src="/media/optimized/evopatch-dot-lines-1200.webp"
         className="opacity-[0.07] mix-blend-multiply"
         imageClassName="-bottom-32 -left-28 w-[58rem] sm:w-[72rem]"
       />
@@ -883,23 +906,35 @@ function Sizes() {
           <div className="mt-8 grid gap-4">
             <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
               <img
-                src="/media/product/evopatch-4x4-flat.jpg"
+                src="/media/optimized/evopatch-4x4-flat-960.webp"
                 alt="EvoPatch 4 by 4 double-layer amnion graft"
+                width={960}
+                height={960}
+                loading="lazy"
+                decoding="async"
                 className="h-56 w-full object-cover sm:h-64"
               />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
                 <img
-                  src="/media/product/evopatch-4x8-flat.jpg"
+                  src="/media/optimized/evopatch-4x8-flat-960.webp"
                   alt="EvoPatch 4 by 8 double-layer amnion graft"
+                  width={960}
+                  height={960}
+                  loading="lazy"
+                  decoding="async"
                   className="h-40 w-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-2xl border border-hairline bg-white">
                 <img
-                  src="/media/product/evopatch-6x6-end-to-end-flat.jpg"
+                  src="/media/optimized/evopatch-6x6-end-to-end-flat-960.webp"
                   alt="EvoPatch 6 by 6 end-to-end graft with center opening"
+                  width={960}
+                  height={960}
+                  loading="lazy"
+                  decoding="async"
                   className="h-40 w-full object-cover"
                 />
               </div>
@@ -1008,15 +1043,23 @@ function WorkflowStorage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-hairline bg-card">
               <img
-                src="/media/product/evopatch-4x8-close.jpg"
+                src="/media/optimized/evopatch-4x8-close-960.webp"
                 alt="Close-up of flexible EvoPatch double-layer amnion graft texture"
+                width={960}
+                height={960}
+                loading="lazy"
+                decoding="async"
                 className="h-72 w-full object-cover"
               />
             </div>
             <div className="overflow-hidden rounded-2xl border border-hairline bg-card">
               <img
-                src="/media/product/evopatch-6x6-end-to-end-close.jpg"
+                src="/media/optimized/evopatch-6x6-end-to-end-close-960.webp"
                 alt="Close-up of EvoPatch 6 by 6 end-to-end graft center opening"
+                width={960}
+                height={960}
+                loading="lazy"
+                decoding="async"
                 className="h-72 w-full object-cover"
               />
             </div>
@@ -1437,7 +1480,15 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <img src="/brand/evologics-logo-wide.png" alt="Evologics" className="h-16 w-auto" />
+            <img
+              src="/brand/evologics-logo-wide.webp"
+              alt="Evologics"
+              width={455}
+              height={128}
+              loading="lazy"
+              decoding="async"
+              className="h-16 w-auto"
+            />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
               EvoPatch is a sterile, dehydrated, double-layer human amniotic membrane allograft
               intended for homologous use as a wound covering. It is chorion-free, omni-directional,
